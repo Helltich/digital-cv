@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV - Fawwazy Haidar Ramadhan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #020617;
+            --card: #0f172a;
+            --text: #e5e7eb;
+            --muted: #94a3b8;
+            --accent: #38bdf8;
+        }
+
+        body.light {
+            --bg: #f8fafc;
+            --card: #ffffff;
+            --text: #0f172a;
+            --muted: #475569;
+            --accent: #0284c7;
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            margin: 0;
+            background: linear-gradient(135deg, #0f172a, var(--bg));
+            color: var(--text);
+            transition: .3s;
+        }
+
+        .toolbar {
+            max-width: 900px;
+            margin: 15px auto 0;
+            display: flex;
+            justify-content: flex-end;
+            gap: 12px;
+        }
+
+        .btn {
+            padding: 8px 14px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            background: var(--accent);
+            color: white;
+            font-size: 13px;
+        }
+
+        .cv {
+            max-width: 900px;
+            margin: 15px auto 40px;
+            background: var(--bg);
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+            animation: fade .8s ease;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: 0;
+                transform: translateY(20px)
+            }
+
+            to {
+                opacity: 1;
+                transform: none
+            }
+        }
+
+        .header {
+            display: flex;
+            gap: 20px;
+            padding: 36px;
+            background: linear-gradient(135deg, #1e293b, var(--bg));
+            align-items: center;
+        }
+
+        .photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #e2e8f0;
+            border: 3px solid var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #64748b;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 26px;
+            color: var(--accent);
+        }
+
+        .header p {
+            margin: 6px 0 0;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 28px;
+            padding: 36px;
+        }
+
+        .card {
+            background: var(--card);
+            border-radius: 14px;
+            padding: 22px;
+            margin-bottom: 24px;
+            animation: fade .6s ease;
+        }
+
+        .card h2 {
+            margin-top: 0;
+            font-size: 16px;
+            color: var(--accent);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .info p,
+        .skill li {
+            font-size: 14px;
+            margin: 8px 0;
+            color: var(--text);
+        }
+
+        .skill ul {
+            padding-left: 18px;
+            margin: 0;
+        }
+
+        .experience h3 {
+            margin: 10px 0 4px;
+            font-size: 15px;
+        }
+
+        .experience span {
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .experience p {
+            font-size: 14px;
+            margin: 4px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 16px;
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        @media print {
+            .toolbar {
+                display: none;
+            }
+
+            body {
+                background: white;
+                color: black;
+            }
+
+            .cv {
+                box-shadow: none;
+                border-radius: 0;
+                margin: 0;
+                max-width: 100%;
+            }
+
+            .header,
+            .content,
+            .card {
+                padding: 12px;
+            }
+
+            .header h1 {
+                font-size: 22px;
+            }
+
+            .header p {
+                font-size: 12px;
+            }
+
+            .card h2 {
+                font-size: 14px;
+            }
+
+            .info p,
+            .skill li,
+            .experience h3,
+            .experience p {
+                font-size: 12px;
+                margin: 4px 0;
+            }
+
+            .content {
+                grid-template-columns: 1fr 2fr;
+                gap: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="toolbar">
+        <button class="btn" onclick="toggleMode()">Light / Dark</button>
+        <button class="btn" onclick="window.print()">Download PDF</button>
+    </div>
+
+    <div class="cv">
+        <div class="header">
+            <div class="photo">
+                <img src="image.jpg" alt="Fawwazy Haidar Ramadhan"
+                    style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+            </div>
+
+            <div>
+                <h1>Fawwazy Haidar Ramadhan</h1>
+                <p>Junior Web Developer</p>
+                <p>Email: zyy01@gmail.com | WhatsApp: 08990737091</p>
+            </div>
+        </div>
+
+        <div class="content">
+            <div>
+                <div class="card info">
+                    <h2>Profil</h2>
+                    <p>
+                        Saya adalah pelajar SMK jurusan <strong>Rekayasa Perangkat Lunak</strong> yang memiliki minat
+                        besar di bidang teknologi, khususnya pengembangan website dan sistem digital.
+                        Terbiasa belajar mandiri, cepat beradaptasi, dan fokus menyelesaikan masalah melalui logika
+                        pemrograman.
+                        Siap berkembang dan berkontribusi di lingkungan kerja profesional.
+                    </p>
+                </div>
+
+                <div class="card skill">
+                    <h2>Skill</h2>
+                    <ul>
+                        <li>HTML, CSS, JavaScript</li>
+                        <li>WordPress Development</li>
+                        <li>Basic PHP & MySQL</li>
+                        <li>UI / UX Dasar</li>
+                        <li>Problem Solving</li>
+                        <li>Komunikasi & Kerja Tim</li>
+                    </ul>
+                </div>
+
+                <div class="card info">
+                    <h2>Data Singkat</h2>
+                    <p>Status: Pelajar SMK</p>
+                    <p>Minat: Web Development & Sistem Informasi</p>
+                </div>
+            </div>
+
+            <div>
+                <div class="card experience">
+                    <h2>Pendidikan</h2>
+                    <h3>Sekolah Menengah Kejuruan (SMK) - Rekayasa Perangkat Lunak</h3>
+                    <span>2022 - Sekarang</span>
+                    <p>Fokus pada pengembangan sistem berbasis web dan teknologi digital.</p>
+                </div>
+
+                <div class="card experience">
+                    <h2>Pengalaman Proyek</h2>
+
+                    <h3>Website Company Profile</h3>
+                    <span>2024</span>
+                    <p>Membuat website company profile menggunakan WordPress dengan desain modern.</p>
+
+                    <h3>Sistem Absensi Online</h3>
+                    <span>2024</span>
+                    <p>Mengembangkan sistem absensi berbasis web dengan login dan export data.</p>
+
+                    <h3>Sistem Ujian Online</h3>
+                    <span>2025</span>
+                    <p>Membuat aplikasi ujian berbasis web dengan soal dinamis dan penilaian otomatis.</p>
+
+                    <h3>Game & Eksperimen Web</h3>
+                    <span>2025</span>
+                    <p>Mengembangkan game sederhana dan simulasi seperti catur 3D untuk melatih logika dan struktur
+                        kode.</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>© 2026 - Digital CV | Fawwazy Haidar Ramadhan</footer>
+    </div>
+
+    <script>
+        function toggleMode() {
+            document.body.classList.toggle("light");
+        }
+    </script>
+</body>
+
+</html>
